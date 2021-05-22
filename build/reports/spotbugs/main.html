@@ -1,0 +1,1018 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+				color: red;
+				font-weight: bold;
+		}
+		.priority-2 {
+				color: orange;
+				font-weight: bold;
+		}
+		.priority-3 {
+				color: green;
+				font-weight: bold;
+		}
+		.priority-4 {
+				color: blue;
+				font-weight: bold;
+		}
+		</style>
+      <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+   </head>
+   <body>
+      <h1>
+         <a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+      <h2>Project Information</h2>
+      <p>Project: 
+		oop-reporting-machinery (spotbugsMain)</p>
+      <p>SpotBugs version: 4.2.2</p>
+      <p>Code analyzed:</p>
+      <ul>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/engine/Engine.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/engine/GameSaver$InterfaceAdapter.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/engine/Interaction.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/engine/GameSaver.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/engine/Engine$GameLoop.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/engine/GameState.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/engine/InteractionImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/FactoryBlock$UnlockableBlockImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/BlockType.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/Block.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/UnlockableBlock.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/FactoryBlock.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/FactoryBlock$BlockFieldImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/FieldBlock.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/block/FactoryBlock$BlockImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/control/GameImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/control/KeyNotifier.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/control/Game.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gameShop/Shop.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gameShop/ShopImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/main/Main.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/FactoryAnimal.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/Pair.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/Direction.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/InventoryImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/PlayerImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/Player.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/Inventory.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/Animal.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/EntityImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/AnimalType.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/Entity.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/AnimalImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/entity/AnimalImpl$1.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/SeedImpl$1.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/Seed.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/Texturable.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/ItemConstants.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/SeedImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/FoodType.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/SeedType.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/item/SeedState.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/MainScreenDrawer$JPanelHB.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/GamePreloader.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/ShopDrawer$4.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/MainScreenDrawer.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/Resources.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/QuitDrawer$1.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/MusicPlayer.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/ShopDrawer$2.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/Resources$LazyResources.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/WindowManager$1.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/GameDrawer.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/ShopDrawer$1.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/ShopDrawer$3.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/Texture.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/ShopDrawer$ObserverShop.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/QuitDrawer.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/JPanelINFO.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/GameDrawer$MyKeyListener.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/ObservableShopGUI.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/WindowManager.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/InfoDrawer.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/ShopDrawer.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/JPanelHUD.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/gui/GameDrawer$MyMouseListener.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/map/MapImpl.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/map/Map.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/utils/Observable.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/utils/Observer.class</li>
+         <li>/home/roby/Downloads/oop-projects/students-oop20-farmingSimulator/build/classes/java/main/Test/FarmingSimulatorTestClass.class</li>
+      </ul>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Metrics</h2>
+      <p>2139 lines of code analyzed,
+	in 71 classes, 
+	in 11 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">8</td>
+            <td align="right">3.74</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">14</td>
+            <td align="right">6.55</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Low Priority Warnings</td>
+            <td align="right">14</td>
+            <td align="right">6.55</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>36</b>
+            </td>
+            <td align="right">
+               <b>16.83</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Contents</h2>
+      <ul>
+         <li>
+            <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_I18N">Internationalization Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+         </li>
+         <li>
+            <a href="#Details">Details</a>
+         </li>
+      </ul>
+      <h1>Summary</h1>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">10</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_I18N">Internationalization Warnings</a>
+            </td>
+            <td align="right">3</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+            </td>
+            <td align="right">3</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">19</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>36</b>
+            </td>
+         </tr>
+      </table>
+      <h1>Warnings</h1>
+      <p>Click on a warning row to see full context information.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e608');">
+            <td>
+               <span class="priority-1">ES</span>
+            </td>
+            <td>Comparison of String parameter using == or != in item.SeedType.getSeedType(String)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e608" style="display: none;">
+                  <a href="#ES_COMPARING_PARAMETER_STRING_WITH_EQ">Bug type ES_COMPARING_PARAMETER_STRING_WITH_EQ (click for details)</a>
+                  <br/>In class item.SeedType<br/>In method item.SeedType.getSeedType(String)<br/>Actual type String<br/>Value loaded from name<br/>Return value of item.SeedType.getName() of type String<br/>At SeedType.java:[line 81]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e264');">
+            <td>
+               <span class="priority-2">Se</span>
+            </td>
+            <td>Class entity.AnimalImpl defines non-transient non-serializable instance field grower</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e264" style="display: none;">
+                  <a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+                  <br/>In class entity.AnimalImpl<br/>Field entity.AnimalImpl.grower<br/>Actual type entity.AnimalImpl$1<br/>In AnimalImpl.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e281');">
+            <td>
+               <span class="priority-1">Se</span>
+            </td>
+            <td>entity.AnimalImpl$1 stored into non-transient field AnimalImpl.grower</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e281" style="display: none;">
+                  <a href="#SE_BAD_FIELD_STORE">Bug type SE_BAD_FIELD_STORE (click for details)</a>
+                  <br/>In class entity.AnimalImpl<br/>Field entity.AnimalImpl.grower<br/>Actual type entity.AnimalImpl$1<br/>At AnimalImpl.java:[line 30]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e342');">
+            <td>
+               <span class="priority-3">Se</span>
+            </td>
+            <td>Class entity.PlayerImpl defines non-transient non-serializable instance field bag</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e342" style="display: none;">
+                  <a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+                  <br/>In class entity.PlayerImpl<br/>Field entity.PlayerImpl.bag<br/>Actual type entity.InventoryImpl<br/>In PlayerImpl.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e359');">
+            <td>
+               <span class="priority-2">Se</span>
+            </td>
+            <td>entity.InventoryImpl stored into non-transient field PlayerImpl.bag</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e359" style="display: none;">
+                  <a href="#SE_BAD_FIELD_STORE">Bug type SE_BAD_FIELD_STORE (click for details)</a>
+                  <br/>In class entity.PlayerImpl<br/>Field entity.PlayerImpl.bag<br/>Actual type entity.InventoryImpl<br/>At PlayerImpl.java:[line 20]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e439');">
+            <td>
+               <span class="priority-3">Se</span>
+            </td>
+            <td>Class gui.JPanelHUD defines non-transient non-serializable instance field game</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e439" style="display: none;">
+                  <a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+                  <br/>In class gui.JPanelHUD<br/>Field gui.JPanelHUD.game<br/>Actual type control.Game<br/>In JPanelHUD.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e556');">
+            <td>
+               <span class="priority-3">Se</span>
+            </td>
+            <td>Class gui.ShopDrawer defines non-transient non-serializable instance field game</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e556" style="display: none;">
+                  <a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+                  <br/>In class gui.ShopDrawer<br/>Field gui.ShopDrawer.game<br/>Actual type control.Game<br/>In ShopDrawer.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e574');">
+            <td>
+               <span class="priority-3">Se</span>
+            </td>
+            <td>Class gui.ShopDrawer defines non-transient non-serializable instance field obsShop</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e574" style="display: none;">
+                  <a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+                  <br/>In class gui.ShopDrawer<br/>Field gui.ShopDrawer.obsShop<br/>Actual type gui.ObservableShopGUI&lt;java.lang.Boolean&gt;<br/>In ShopDrawer.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e591');">
+            <td>
+               <span class="priority-3">Se</span>
+            </td>
+            <td>Class gui.WindowManager defines non-transient non-serializable instance field game</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e591" style="display: none;">
+                  <a href="#SE_BAD_FIELD">Bug type SE_BAD_FIELD (click for details)</a>
+                  <br/>In class gui.WindowManager<br/>Field gui.WindowManager.game<br/>Actual type control.Game<br/>In WindowManager.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e531');">
+            <td>
+               <span class="priority-3">UI</span>
+            </td>
+            <td>Usage of GetResource in new gui.Resources() may be unsafe if class is extended</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e531" style="display: none;">
+                  <a href="#UI_INHERITANCE_UNSAFE_GETRESOURCE">Bug type UI_INHERITANCE_UNSAFE_GETRESOURCE (click for details)</a>
+                  <br/>In class gui.Resources<br/>In method new gui.Resources()<br/>At Resources.java:[line 41]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e318');">
+            <td>
+               <span class="priority-3">SIO</span>
+            </td>
+            <td>entity.InventoryImpl.removeAllFood() does an unnecessary type check using instanceof operator when it can be determined statically</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e318" style="display: none;">
+                  <a href="#SIO_SUPERFLUOUS_INSTANCEOF">Bug type SIO_SUPERFLUOUS_INSTANCEOF (click for details)</a>
+                  <br/>In class entity.InventoryImpl<br/>In method entity.InventoryImpl.removeAllFood()<br/>At InventoryImpl.java:[line 169]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_I18N">Internationalization Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e178');">
+            <td>
+               <span class="priority-1">Dm</span>
+            </td>
+            <td>Found reliance on default encoding in engine.GameSaver.load(): new java.util.Scanner(File)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e178" style="display: none;">
+                  <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+                  <br/>In class engine.GameSaver<br/>In method engine.GameSaver.load()<br/>Called method new java.util.Scanner(File)<br/>At GameSaver.java:[line 64]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e193');">
+            <td>
+               <span class="priority-1">Dm</span>
+            </td>
+            <td>Found reliance on default encoding in engine.GameSaver.save(Game): new java.io.FileWriter(String)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e193" style="display: none;">
+                  <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+                  <br/>In class engine.GameSaver<br/>In method engine.GameSaver.save(Game)<br/>Called method new java.io.FileWriter(String)<br/>At GameSaver.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e630');">
+            <td>
+               <span class="priority-1">Dm</span>
+            </td>
+            <td>Found reliance on default encoding in new map.MapImpl(): new java.io.InputStreamReader(InputStream)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e630" style="display: none;">
+                  <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+                  <br/>In class map.MapImpl<br/>In method new map.MapImpl()<br/>Called method new java.io.InputStreamReader(InputStream)<br/>At MapImpl.java:[line 36]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_PERFORMANCE">Performance Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e220');">
+            <td>
+               <span class="priority-2">SIC</span>
+            </td>
+            <td>Should engine.GameSaver$InterfaceAdapter be a _static_ inner class?</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e220" style="display: none;">
+                  <a href="#SIC_INNER_SHOULD_BE_STATIC">Bug type SIC_INNER_SHOULD_BE_STATIC (click for details)</a>
+                  <br/>In class engine.GameSaver$InterfaceAdapter<br/>At GameSaver.java:[lines 78-104]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e543');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: gui.Resources.mainTheme</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e543" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class gui.Resources<br/>Field gui.Resources.mainTheme<br/>In Resources.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e376');">
+            <td>
+               <span class="priority-2">WMI</span>
+            </td>
+            <td>gameShop.ShopImpl.sellAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e376" style="display: none;">
+                  <a href="#WMI_WRONG_MAP_ITERATOR">Bug type WMI_WRONG_MAP_ITERATOR (click for details)</a>
+                  <br/>In class gameShop.ShopImpl<br/>In method gameShop.ShopImpl.sellAll(Map)<br/>At ShopImpl.java:[line 60]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e230');">
+            <td>
+               <span class="priority-3">BC</span>
+            </td>
+            <td>Unchecked/unconfirmed cast from block.Block to block.UnlockableBlock in engine.InteractionImpl.unlockBlock(Player, Map, Block)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e230" style="display: none;">
+                  <a href="#BC_UNCONFIRMED_CAST">Bug type BC_UNCONFIRMED_CAST (click for details)</a>
+                  <br/>In class engine.InteractionImpl<br/>In method engine.InteractionImpl.unlockBlock(Player, Map, Block)<br/>Actual type block.Block<br/>Expected block.UnlockableBlock<br/>Value loaded from block<br/>At InteractionImpl.java:[line 45]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e298');">
+            <td>
+               <span class="priority-2">BC</span>
+            </td>
+            <td>instanceof will always return true for all non-null values in entity.InventoryImpl.removeAllFood(), since all item.FoodType are instances of item.FoodType</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e298" style="display: none;">
+                  <a href="#BC_VACUOUS_INSTANCEOF">Bug type BC_VACUOUS_INSTANCEOF (click for details)</a>
+                  <br/>In class entity.InventoryImpl<br/>In method entity.InventoryImpl.removeAllFood()<br/>Actual type item.FoodType<br/>Expected item.FoodType<br/>At InventoryImpl.java:[line 169]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e160');">
+            <td>
+               <span class="priority-2">DLS</span>
+            </td>
+            <td>Dead store to json in engine.GameSaver.save(Game)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e160" style="display: none;">
+                  <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+                  <br/>In class engine.GameSaver<br/>In method engine.GameSaver.save(Game)<br/>Local variable named json<br/>At GameSaver.java:[line 48]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e405');">
+            <td>
+               <span class="priority-1">DLS</span>
+            </td>
+            <td>Dead store to commands in gui.InfoDrawer.generateInfoPanel(Game, Dimension)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e405" style="display: none;">
+                  <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+                  <br/>In class gui.InfoDrawer<br/>In method gui.InfoDrawer.generateInfoPanel(Game, Dimension)<br/>Local variable named commands<br/>At InfoDrawer.java:[line 32]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e422');">
+            <td>
+               <span class="priority-1">DLS</span>
+            </td>
+            <td>Dead store to gameInfo in gui.InfoDrawer.generateInfoPanel(Game, Dimension)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e422" style="display: none;">
+                  <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+                  <br/>In class gui.InfoDrawer<br/>In method gui.InfoDrawer.generateInfoPanel(Game, Dimension)<br/>Local variable named gameInfo<br/>At InfoDrawer.java:[line 33]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e92');">
+            <td>
+               <span class="priority-2">Eq</span>
+            </td>
+            <td>block.FactoryBlock$BlockFieldImpl doesn't override FactoryBlock$BlockImpl.equals(Object)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e92" style="display: none;">
+                  <a href="#EQ_DOESNT_OVERRIDE_EQUALS">Bug type EQ_DOESNT_OVERRIDE_EQUALS (click for details)</a>
+                  <br/>In class block.FactoryBlock$BlockFieldImpl<br/>At FactoryBlock.java:[line 1]<br/>Did you intend to override block.FactoryBlock$BlockImpl.equals(Object)</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e104');">
+            <td>
+               <span class="priority-2">Eq</span>
+            </td>
+            <td>block.FactoryBlock$UnlockableBlockImpl doesn't override FactoryBlock$BlockImpl.equals(Object)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e104" style="display: none;">
+                  <a href="#EQ_DOESNT_OVERRIDE_EQUALS">Bug type EQ_DOESNT_OVERRIDE_EQUALS (click for details)</a>
+                  <br/>In class block.FactoryBlock$UnlockableBlockImpl<br/>At FactoryBlock.java:[line 1]<br/>Did you intend to override block.FactoryBlock$BlockImpl.equals(Object)</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e252');">
+            <td>
+               <span class="priority-2">Eq</span>
+            </td>
+            <td>entity.AnimalImpl doesn't override java.awt.Rectangle.equals(Object)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e252" style="display: none;">
+                  <a href="#EQ_DOESNT_OVERRIDE_EQUALS">Bug type EQ_DOESNT_OVERRIDE_EQUALS (click for details)</a>
+                  <br/>In class entity.AnimalImpl<br/>At AnimalImpl.java:[line 1]<br/>Did you intend to override java.awt.Rectangle.equals(Object)</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e330');">
+            <td>
+               <span class="priority-2">Eq</span>
+            </td>
+            <td>entity.PlayerImpl doesn't override java.awt.Rectangle.equals(Object)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e330" style="display: none;">
+                  <a href="#EQ_DOESNT_OVERRIDE_EQUALS">Bug type EQ_DOESNT_OVERRIDE_EQUALS (click for details)</a>
+                  <br/>In class entity.PlayerImpl<br/>At PlayerImpl.java:[line 1]<br/>Did you intend to override java.awt.Rectangle.equals(Object)</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e502');">
+            <td>
+               <span class="priority-3">RCN</span>
+            </td>
+            <td>Redundant nullcheck of audioIn, which is known to be non-null in gui.MusicPlayer.run()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e502" style="display: none;">
+                  <a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+                  <br/>In class gui.MusicPlayer<br/>In method gui.MusicPlayer.run()<br/>Value loaded from audioIn<br/>Return value of javax.sound.sampled.AudioSystem.getAudioInputStream(InputStream) of type javax.sound.sampled.AudioInputStream<br/>Redundant null check at MusicPlayer.java:[line 25]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e208');">
+            <td>
+               <span class="priority-3">REC</span>
+            </td>
+            <td>Exception is caught when Exception is not thrown in engine.GameSaver.load()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e208" style="display: none;">
+                  <a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+                  <br/>In class engine.GameSaver<br/>In method engine.GameSaver.load()<br/>At GameSaver.java:[line 72]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e519');">
+            <td>
+               <span class="priority-3">REC</span>
+            </td>
+            <td>Exception is caught when Exception is not thrown in gui.MusicPlayer.run()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e519" style="display: none;">
+                  <a href="#REC_CATCH_EXCEPTION">Bug type REC_CATCH_EXCEPTION (click for details)</a>
+                  <br/>In class gui.MusicPlayer<br/>In method gui.MusicPlayer.run()<br/>At MusicPlayer.java:[line 33]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e456');">
+            <td>
+               <span class="priority-2">RV</span>
+            </td>
+            <td>Return value of control.Game.getPlayer() ignored, but method has no side effect</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e456" style="display: none;">
+                  <a href="#RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT">Bug type RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT (click for details)</a>
+                  <br/>In class gui.MainScreenDrawer<br/>In method gui.MainScreenDrawer.drawMap(Graphics)<br/>Called method control.Game.getPlayer()<br/>At MainScreenDrawer.java:[line 124]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e487');">
+            <td>
+               <span class="priority-2">RV</span>
+            </td>
+            <td>Return value of new java.awt.BorderLayout() ignored, but method has no side effect</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e487" style="display: none;">
+                  <a href="#RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT">Bug type RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT (click for details)</a>
+                  <br/>In class gui.MainScreenDrawer$JPanelHB<br/>In method new gui.MainScreenDrawer$JPanelHB(MainScreenDrawer)<br/>Called method new java.awt.BorderLayout()<br/>At MainScreenDrawer.java:[line 170]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e116');">
+            <td>
+               <span class="priority-2">SF</span>
+            </td>
+            <td>Switch statement found in control.KeyNotifier.keyPressed(KeyEvent) where default case is missing</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e116" style="display: none;">
+                  <a href="#SF_SWITCH_NO_DEFAULT">Bug type SF_SWITCH_NO_DEFAULT (click for details)</a>
+                  <br/>In class control.KeyNotifier<br/>In method control.KeyNotifier.keyPressed(KeyEvent)<br/>At KeyNotifier.java:[lines 23-43]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e471');">
+            <td>
+               <span class="priority-1">ST</span>
+            </td>
+            <td>Write to static field gui.MainScreenDrawer.blockSize from instance method new gui.MainScreenDrawer(Game, Dimension)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e471" style="display: none;">
+                  <a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+                  <br/>In class gui.MainScreenDrawer<br/>In method new gui.MainScreenDrawer(Game, Dimension)<br/>Field gui.MainScreenDrawer.blockSize<br/>At MainScreenDrawer.java:[line 40]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e128');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>Engine.game not initialized in constructor and dereferenced in engine.Engine$GameLoop.actionPerformed(ActionEvent)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e128" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class engine.Engine<br/>Field engine.Engine.game<br/>In method engine.Engine$GameLoop.actionPerformed(ActionEvent)<br/>At Engine.java:[line 69]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d1e144');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>Engine.window not initialized in constructor and dereferenced in engine.Engine$GameLoop.actionPerformed(ActionEvent)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d1e144" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class engine.Engine<br/>Field engine.Engine.window<br/>In method engine.Engine$GameLoop.actionPerformed(ActionEvent)<br/>At Engine.java:[line 73]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d1e388');">
+            <td>
+               <span class="priority-3">UwF</span>
+            </td>
+            <td>GamePreloader.obs not initialized in constructor and dereferenced in gui.GamePreloader.notifyObserver(Boolean)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d1e388" style="display: none;">
+                  <a href="#UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">Bug type UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR (click for details)</a>
+                  <br/>In class gui.GamePreloader<br/>Field gui.GamePreloader.obs<br/>In method gui.GamePreloader.notifyObserver(Boolean)<br/>At GamePreloader.java:[line 13]</p>
+            </td>
+         </tr>
+      </table>
+      <h1>
+         <a name="Details">Details</a>
+      </h1>
+      <h2>
+         <a name="BC_UNCONFIRMED_CAST">BC_UNCONFIRMED_CAST: Unchecked/unconfirmed cast</a>
+      </h2>
+
+<p>
+This cast is unchecked, and not all instances of the type casted from can be cast to
+the type it is being cast to. Check that your program logic ensures that this
+cast will not fail.
+</p>
+
+    <h2>
+         <a name="BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF: instanceof will always return true</a>
+      </h2>
+
+<p>
+This instanceof test will always return true (unless the value being tested is null).
+Although this is safe, make sure it isn't
+an indication of some misunderstanding or some other logic error.
+If you really want to test the value for being null, perhaps it would be clearer to do
+better to do a null test rather than an instanceof test.
+</p>
+
+    <h2>
+         <a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
+      </h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    <h2>
+         <a name="DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING: Reliance on default encoding</a>
+      </h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      <h2>
+         <a name="ES_COMPARING_PARAMETER_STRING_WITH_EQ">ES_COMPARING_PARAMETER_STRING_WITH_EQ: Comparison of String parameter using == or !=</a>
+      </h2>
+
+  <p>This code compares a <code>java.lang.String</code> parameter for reference
+equality using the == or != operators. Requiring callers to
+pass only String constants or interned strings to a method is unnecessarily
+fragile, and rarely leads to measurable performance gains. Consider
+using the <code>equals(Object)</code> method instead.</p>
+
+    <h2>
+         <a name="EQ_DOESNT_OVERRIDE_EQUALS">EQ_DOESNT_OVERRIDE_EQUALS: Class doesn't override equals in superclass</a>
+      </h2>
+
+  <p> This class extends a class that defines an equals method and adds fields, but doesn't
+define an equals method itself. Thus, equality on instances of this class will
+ignore the identity of the subclass and the added fields. Be sure this is what is intended,
+and that you don't need to override the equals method. Even if you don't need to override
+the equals method, consider overriding it anyway to document the fact
+that the equals method for the subclass just return the result of
+invoking super.equals(o).
+  </p>
+
+    <h2>
+         <a name="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE: Redundant nullcheck of value known to be non-null</a>
+      </h2>
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    <h2>
+         <a name="REC_CATCH_EXCEPTION">REC_CATCH_EXCEPTION: Exception is caught when Exception is not thrown</a>
+      </h2>
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     <h2>
+         <a name="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT">RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT: Return value of method without side effect is ignored</a>
+      </h2>
+
+<p>This code calls a method and ignores the return value. However our analysis shows that
+the method (including its implementations in subclasses if any) does not produce any effect
+other than return value. Thus this call can be removed.
+</p>
+<p>We are trying to reduce the false positives as much as possible, but in some cases this warning might be wrong.
+Common false-positive cases include:</p>
+<p>- The method is designed to be overridden and produce a side effect in other projects which are out of the scope of the analysis.</p>
+<p>- The method is called to trigger the class loading which may have a side effect.</p>
+<p>- The method is called just to get some exception.</p>
+<p>If you feel that our assumption is incorrect, you can use a @CheckReturnValue annotation
+to instruct SpotBugs that ignoring the return value of this method is acceptable.
+</p>
+
+    <h2>
+         <a name="SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT: Switch statement found where default case is missing</a>
+      </h2>
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    <h2>
+         <a name="SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC: Should be a static inner class</a>
+      </h2>
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    <h2>
+         <a name="SIO_SUPERFLUOUS_INSTANCEOF">SIO_SUPERFLUOUS_INSTANCEOF: Unnecessary type check done using instanceof operator</a>
+      </h2>
+
+<p> Type check performed using the instanceof operator where it can be statically determined whether the object
+is of the type requested. </p>
+
+    <h2>
+         <a name="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD: Write to static field from instance method</a>
+      </h2>
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    <h2>
+         <a name="SE_BAD_FIELD_STORE">SE_BAD_FIELD_STORE: Non-serializable value stored into instance field of a serializable class</a>
+      </h2>
+
+<p> A non-serializable value is stored into a non-transient field
+of a serializable class.</p>
+
+    <h2>
+         <a name="SE_BAD_FIELD">SE_BAD_FIELD: Non-transient non-serializable instance field in serializable class</a>
+      </h2>
+
+<p> This Serializable class defines a non-primitive instance field which is neither transient,
+Serializable, or <code>java.lang.Object</code>, and does not appear to implement
+the <code>Externalizable</code> interface or the
+<code>readObject()</code> and <code>writeObject()</code> methods.&nbsp;
+Objects of this class will not be deserialized correctly if a non-Serializable
+object is stored in this field.</p>
+
+    <h2>
+         <a name="UI_INHERITANCE_UNSAFE_GETRESOURCE">UI_INHERITANCE_UNSAFE_GETRESOURCE: Usage of GetResource may be unsafe if class is extended</a>
+      </h2>
+
+<p>Calling <code>this.getClass().getResource(...)</code> could give
+results other than expected if this class is extended by a class in
+another package.</p>
+
+    <h2>
+         <a name="UUF_UNUSED_FIELD">UUF_UNUSED_FIELD: Unused field</a>
+      </h2>
+
+  <p> This field is never used.&nbsp; Consider removing it from the class.</p>
+
+    <h2>
+         <a name="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR">UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR: Field not initialized in constructor but dereferenced without null check</a>
+      </h2>
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    <h2>
+         <a name="WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR: Inefficient use of keySet iterator instead of entrySet iterator</a>
+      </h2>
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        </body>
+</html>
