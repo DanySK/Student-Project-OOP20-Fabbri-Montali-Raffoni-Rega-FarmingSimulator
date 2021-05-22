@@ -1,2 +1,0 @@
-FarmingSimulatorTestClass.java
- Test.FarmingSimulatorTestClass
